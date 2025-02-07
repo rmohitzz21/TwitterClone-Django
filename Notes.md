@@ -69,6 +69,9 @@ Add App into the tweeter Clone----------->
 python manage.py startapp tweet
 
 
+Add Some Features To improve This Project ----> 
+
+
 
 
 
