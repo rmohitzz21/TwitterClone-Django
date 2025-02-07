@@ -64,7 +64,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-Add App ----------->
+Add App into the tweeter Clone----------->
 
 python manage.py startapp tweet
 
