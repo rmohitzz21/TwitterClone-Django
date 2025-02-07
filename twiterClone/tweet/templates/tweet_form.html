@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+lets Tweet
+{% endblock  %}
+
+{% block  content %}
+<h1 class="text-center"> Welcome to Twiter Clone</h1>
+
+<div class="container mt-5">
+    <h4>
+        {% if form.instance.pk %}Edit Tweet {% else %}Create Tweet{% endif %}
+    </h4>
+
+    <form method="POST" enctype="multipart/form-data" class="mt-3">
+        {% comment %} enctype is a special encoding type that allows files to be sent through a POST request. {% endcomment %}
+      {% comment %} csrf_token is a security feature in Django to prevent Cross Site Request Forgery (CSRF) attacks. {% endcomment %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        <a href="{% url 'tweet_detail' %}" class="btn btn-secondary mt-2">Cancel</a>
+    </form>
+</div>
+
+{% endblock  %}
